@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test 8" />
+		<Option pch_mode="2" />
+		<Option compiler="ppc-gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="default/Test 8.elf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="default" />
+				<Option type="1" />
+				<Option compiler="ppc-gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-g" />
+			<Add option="-O2" />
+			<Add option="-fno-common" />
+			<Add option="-mcpu=505" />
+			<Add option="-meabi" />
+			<Add option="-D_ARCH_PPC555" />
+			<Add option="-DPHYCORE_MPC565" />
+			<Add directory="src" />
+			<Add directory="h" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,-Map,map.txt" />
+			<Add option="-T ld/target.ld" />
+			<Add option="-mcpu=505" />
+		</Linker>
+		<Unit filename="h/mpc555.h" />
+		<Unit filename="ld/target.ld" />
+		<Unit filename="src/crt0.S" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

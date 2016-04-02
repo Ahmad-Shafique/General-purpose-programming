@@ -1,0 +1,47 @@
+.model small
+.stack 100h
+.code
+main proc
+    mov bh,10h
+    
+    mov ah,1
+    int 21h
+    
+    mov bl,al
+    
+    cmp bl,40h
+    jle exit
+    
+    cmp bl,5bh
+    jge exit
+    
+    add bl,1h
+    
+    start:
+    mov ah,2
+    mov dl,bl
+    int 21h
+    
+    add bl,1h
+    
+    sub bh,1h
+    
+    cmp bh,0h
+    jle exit
+    
+    cmp bl,5bh
+    jge exit
+    
+    loop start
+    
+    exit: 
+    mov cl,10h
+    sub cl,bl
+    mov ah,2
+    mov dl,cl
+    int 21h
+    mov ah,4ch
+    int 21h
+    
+    main endp
+end main

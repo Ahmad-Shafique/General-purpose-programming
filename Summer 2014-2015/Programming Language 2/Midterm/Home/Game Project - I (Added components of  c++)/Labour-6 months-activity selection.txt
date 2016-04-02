@@ -1,0 +1,5 @@
+How do you intend to spend the next 6 months ? Choose :
+1) Work in the fields (Physique +5, gold +300, Influence -4)
+2) Cut & Sell wood (Physique +8,gold +500, Morality -3)
+3) Hunt (gold +50, Influence +2, 30% chance of rare hunt, 
+				0.3% chance of legendary hunt)

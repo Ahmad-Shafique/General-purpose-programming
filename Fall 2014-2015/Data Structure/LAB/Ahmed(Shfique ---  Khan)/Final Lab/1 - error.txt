@@ -1,0 +1,203 @@
+.model small
+.stack 100h
+.data
+prompt dw "Enter a hex number of 4 digits or less",0ah,0dh,"$" 
+op dw "Binary equivalent is :$"  
+errmsg dw 0ah,0dh,"Invalid !!!",0ah,0dh,"$"
+.code
+main proc
+    mov ax,@data   
+    mov ds,ax
+    
+    call input
+    call check
+    cmp dl,0
+    jle error1
+    call bprint
+    call conversion
+    call mainprint
+    jmp exit1
+    
+    error1:
+    mov ah,9
+    lea dx,errmsg
+    int 21h
+    
+    exit1:
+    mov ah,4ch
+    int 21h
+    main endp
+
+input proc
+    mov ah,1
+    
+    int 21h
+    mov bl,al
+    
+    int 21h
+    mov bh,al
+    
+    int 21h
+    mov cl,al
+    
+    int 21h
+    mov ch,al
+    
+    ret
+    
+    input endp
+
+check proc
+    cmp bl,41h
+    jge ok1
+    jmp error2
+    
+    ok1:
+    cmp bl,5ah
+    jle ok2
+    jmp error2 
+    
+    ok2:
+    cmp bh,41h
+    jge ok3
+    jmp error2
+    
+    ok3:
+    cmp bh,5ah
+    jle ok4
+    jmp error2
+    
+    ok4:
+    cmp cl,41h
+    jge ok5
+    jmp error2
+    
+    ok5:
+    cmp cl,5ah
+    jle ok6
+    jmp error2 
+    
+    ok6:
+    cmp ch,41h
+    jge ok7
+    jmp error2
+    
+    ok7:
+    cmp ch,5ah
+    jle okfinal
+    jmp error2
+    
+    okfinal:
+    mov dl,1
+    ret
+    jmp exit
+            
+    error2:
+    mov dl,0
+    ret
+    
+    exit:
+    check endp 
+
+bprint proc
+    mov ah,9
+    lea dx,op
+    int 21h
+    ret
+    bprint endp 
+
+conversion proc
+    sub bl,55d
+    sub bh,55d
+    sub cl,55d
+    sub ch,55d
+    ret
+    conversion endp  
+
+mainprint proc
+    shl bl,4
+    shl cl,4
+    shl bh,4
+    shl ch,4
+    
+    mov dh,4
+    print1:
+    dec dh
+    cmp dh,0
+    jl print2
+    rol bl,1
+    jc 1print
+    jnc 0print
+    1print:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    jmp print1
+    0print:
+    mov dl,30h
+    mov ah,2
+    int 21h
+    jmp print1 
+    
+    mov dh,4
+    print2:
+    dec dh
+    cmp dh,0
+    jl print3
+    rol bh,1
+    jc 1print2
+    jnc 0print2
+    1print2:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    jmp print1
+    0print2:
+    mov dl,30h
+    mov ah,2
+    int 21h
+    jmp print1
+    
+    mov dh,4
+    print3:
+    dec dh
+    cmp dh,0
+    jl print4
+    rol cl,1
+    jc 1print3
+    jnc 0print3
+    1print3:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    jmp print1
+    0print3:
+    mov dl,30h
+    mov ah,2
+    int 21h
+    jmp print1
+    
+    mov dh,4
+    print4:
+    dec dh
+    cmp dh,0
+    jl exit
+    rol ch,1
+    jc 1print4
+    jnc 0print4
+    1print4:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    jmp print1
+    0print4:
+    mov dl,30h
+    mov ah,2
+    int 21h
+    jmp print1
+    
+    exit2:
+    
+    ret
+    mainprint endp  
+end main 

@@ -1,0 +1,155 @@
+import javafx.stage.*;
+//Stage is used for setting scenes
+import javafx.scene.Group;
+//Group is used for constructing node (used in scene)
+import javafx.scene.Scene;
+//Scene is in essence just a window
+import javafx.application.*;
+//Subclass of application class is needed for all standalone applications
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+/*
+ * Label class inherits from both , control and layout class
+ */
+import javafx.event.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+//For handling on-press-action of buttons
+import javafx.scene.paint.*;
+import javafx.scene.shape.*;
+import java.lang.Math;
+/*This group of imports is for providing size , colour etc.
+ * to the group node , which forms the main basis of all the
+ * buttons presnt in the program
+ * 
+ */
+import javafx.scene.layout.VBox;
+
+
+
+
+
+
+public class PersonalAssisstant extends Application{
+	public static void main(String [] args){
+		launch(args);
+		/*launch() provides default implementation of
+		 * init(),start() and stop()
+		 * unless the methods are overwritten
+		 * 
+		 *init() initializes the program without actually 
+		 * doing anything else
+		 * 
+		 *start() does all the actions in the given program
+		 *
+		 *stop() stops the executon of the program 
+		 *  
+		 */
+	}
+	
+	public void start(Stage mainStage){
+		Group mainSceneRoot = new Group();
+		/* mainSceneRoot.computeAreaInScreen();
+		* mainSceneRoot is to take the size of the monitor and project 
+		* the scene accordingly
+		*/
+		
+		Scene mainScene = new Scene(mainSceneRoot,700,500);
+		//mainStage.setScene(mainScene);
+		mainStage.setTitle("Main Applicaion Window");
+		
+		/*
+		 *Label mainLabel = new Label("First control - Label");
+		*Used to display written text	
+		 *mainSceneRoot.getChildren().add(mainLabel);
+		*Will add this label to every children of this node
+		*Works using ObservableList<>
+		*/
+		Label buttonPress;
+		buttonPress = new Label("What would you like to access ?");
+		Button financeManager = new Button("Finance Manager");
+		Button profileManager = new Button("Profile Manager");
+		Button callReminder = new Button("Call Reminder");
+		Button routineMaker = new Button("Routine Maker");
+		/*
+		 * Buttons for the modules created
+		 * Respective events to follow
+		 */
+		financeManager.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				buttonPress.setText("Finance Manager module to be called\n");
+			}
+		});
+		
+		profileManager.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				buttonPress.setText("Profile Manager module to be called\n");
+			}
+		});
+		
+		callReminder.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				buttonPress.setText("Call Reminder module to be called\n");
+			}
+		});
+		
+		routineMaker.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				buttonPress.setText("Routine Maker module to be called\n");
+			}
+		});
+		
+		/*for (int i = 0; i < 5; i++) {
+		    Rectangle r = new Rectangle();
+		    r.setY(i * 20);
+		    r.setWidth(100);
+		    r.setHeight(10);
+		    r.setFill(Color.RED);
+		    mainSceneRoot.getChildren().add(r);
+		}
+		
+		 * Supposed to give size,shape and colour to the children of 
+		 * mainSceneRoot node. In this case , the 
+		 * buttons
+		 */
+		
+		
+
+		
+		
+		
+		
+		/*
+		 * Adding the defined buttons and labels to the scene
+		 */
+		
+		
+		VBox vbButtons = new VBox(15);
+		vbButtons.setAlignment(Pos.CENTER_LEFT);
+		//vbButtons.setSpacing(10);
+		//vbButtons.setPadding(new Insets(0, 20, 10, 20)); 
+		vbButtons.getChildren().addAll(financeManager,profileManager,callReminder,routineMaker,buttonPress);//
+		//vbButtons.setMargin(profileManager,new Insets(200,200,200,200));
+		
+	
+		
+		
+		/*
+		*Supposed to set aside boundaries for the buttons
+		*Not working for some reason
+		*/
+		
+	//	mainSceneRoot.getChildren().addAll(financeManager,profileManager,callReminder,routineMaker,buttonPress);
+		
+		
+		Scene sc1 = new Scene(vbButtons,400,400);
+		mainStage.setScene(sc1);
+		mainStage.show();
+		/*Used to display content created by this stage
+		 */
+	}
+	
+	
+	
+	
+}

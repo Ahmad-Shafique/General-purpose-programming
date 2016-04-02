@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1432433955 source:c:\university\post spring 2015\s\file\main.cpp
+	<iostream>
+	<fstream>
+

@@ -1,0 +1,7 @@
+Choose what you would like to do for next 6 :
+1) Take up job as general doctor (Moral point +20, Gold +2000, Influence +7)
+2) Take up job as surgeon in operation theater 
+   (28% chance of success, 35% chance of risk)
+   (With success, Moral point +80, Gold +15000, Influence +120)
+   (In case of risk, Moral point -95, Gold +3000, Influence -100, 10% chance of retaliation)
+   (If the relatives retaliate, they will kill you)

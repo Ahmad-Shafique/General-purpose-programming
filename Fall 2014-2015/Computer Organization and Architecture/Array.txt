@@ -1,0 +1,28 @@
+.model small
+.stack 100h
+.data 
+array db 10h,20h,30h
+
+.code
+
+main proc
+    mov ax,@data
+    mov ds,ax
+    mov bh,0			;initialization of BH to 0
+    add bh,array		;adding the first element of the array with BH
+    
+ 
+    
+    add bh,array+1		;adding the second element of the array with BH
+    
+
+    
+    add bh,array+2		;adding the third element of the array with BH
+    
+    
+    mov ah,2
+    mov dl,bh
+    int 21h         		;output. result comes from BH
+    
+    main endp
+end main

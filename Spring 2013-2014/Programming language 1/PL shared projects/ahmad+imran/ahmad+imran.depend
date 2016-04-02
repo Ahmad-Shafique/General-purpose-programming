@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1391606510 source:g:\new folder\ahmad+imran\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1391696346 source:g:\new folder\ahmad+imran\programme 1.c
+	<stdio.h>
+	<stdlib.h>
+
+1391695325 source:g:\new folder\ahmad+imran\progamme-imran.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,92 @@
+#include <iostream>
+
+using namespace std;
+
+struct node
+{
+    int data;
+    node* previous;
+    node* next;
+};
+
+node* root1 = NULL;
+node* root2=NULL;
+
+void addfirst(int value)
+{
+    node* newnode = new node;
+    newnode->data = value;
+    newnode->next = NULL;
+    newnode->previous = NULL;
+
+    if(root1 == NULL)
+    {
+        root1 = newnode;
+    }
+    else
+    {
+        node* t = root1;
+        while(t->previous != NULL)
+        {
+            t = t->previous;
+        }
+        newnode->next = t;
+        newnode->previous = NULL;
+        t->previous = newnode;
+		root2=newnode;
+    }
+}
+void search(int x)
+{
+	int y;
+	for(;;)
+	{
+		if((root2->data== x)||(root1->data==x))
+		{
+			y=x;
+			cout<<"DATA FOUND: "<<y<<endl;
+			break;
+		}
+		else if(root2->data==root1->data)
+		{
+			cout<<"NO DATA FOUND"<<endl;
+			break;
+		}
+		root2=root2->next;
+		root1=root1->previous;
+	}
+
+}
+
+void print()
+{
+	cout << "Current Link: ";
+	node* t = root1;
+	while(t->previous != NULL)
+	{
+	    t = t->previous;
+	}
+	while(t != NULL)
+	{
+		cout << t->data << " -> ";
+		t = t->next;
+	}
+	cout << endl;
+	cout<< "Root1 is "<<root1->data<<endl;
+	cout<< "Root2 is "<<root2->data<<endl;
+}
+
+void main()
+{
+	int x;
+    addfirst(6);
+    addfirst(7);
+    addfirst(3);
+    addfirst(2);
+	addfirst(10);
+	print();
+	cout<<"Search number plz: ";
+	cin>>x;
+	search(x);
+    print();
+}

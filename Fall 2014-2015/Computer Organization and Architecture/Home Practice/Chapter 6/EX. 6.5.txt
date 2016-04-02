@@ -1,0 +1,65 @@
+.model small
+.stack 100h
+.data
+prompt dw "Enter a string : ",0ah,0dh,"$"
+op1 dw 0ah,0dh,"First Capital letter : $"
+op2 dw 0ah,0ah,"Last Capital letter : $"
+first db '['
+last db '@'
+
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+    
+    mov ah,9
+    lea dx,prompt
+    int 21h
+    
+    start:
+    mov ah,1
+    int 21h 
+    
+    mov bl,al
+    
+    cmp bl,0Dh
+    je exit
+    
+    cmp bl,first
+    jl change1
+    jmp change2
+    
+    change1:
+    mov first,bl
+    
+    change2:
+    cmp bl,last
+    jg change3
+    jmp start
+    
+    change3:
+    mov last,bl
+    jmp start
+    
+    exit:
+    mov ah,9
+    lea dx,op1
+    int 21h
+    
+    mov dl,first
+    
+    mov ah,2
+    int 21h
+    
+    
+    mov ah,9
+    lea dx,op2
+    int 21h
+    
+    mov dl,last
+    
+    mov ah,2
+    int 21h
+    
+    main endp
+end main

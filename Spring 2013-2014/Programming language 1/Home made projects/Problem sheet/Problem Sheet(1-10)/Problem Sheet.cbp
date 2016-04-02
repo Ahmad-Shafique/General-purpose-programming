@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Problem Sheet" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Problem Sheet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Problem Sheet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Decimal to Octal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Kilometer to mile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Mile to Kilometer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 1 (Even-Odd).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 10 (Distance conversion).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 2(Prime number).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 3 (Leap Year).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 4 (ASCII).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 5 (Factoial number).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 6 (Perfect number).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 7 (Armstrong number).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 8 (Sum of all diits).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question 9 (Reverse of a number).c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Question Eleven.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print command.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

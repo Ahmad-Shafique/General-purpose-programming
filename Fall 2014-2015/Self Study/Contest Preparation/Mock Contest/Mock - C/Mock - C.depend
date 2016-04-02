@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1414755707 source:e:\self study\contest preparation\mock contest\mock - c\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<algorithm>
+

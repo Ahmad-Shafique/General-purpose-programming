@@ -1,0 +1,5 @@
+Choose what you woud like to do for next 6 months :
+1)Study (-60 coins, +10 EP, +2 MP, -2 PP)
+2)Part time job (+1 EP , +10 coin, +2 PP)
+3)Full time job (-1 EP, +30 coin, +5 PP)
+4)Other

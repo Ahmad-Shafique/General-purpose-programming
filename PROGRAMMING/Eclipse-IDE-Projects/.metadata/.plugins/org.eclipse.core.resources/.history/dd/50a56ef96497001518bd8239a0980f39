@@ -1,0 +1,101 @@
+import javafx.stage.*;
+//Stage is used for setting scenes
+import javafx.scene.Scene;
+//Scene is in essence just a window
+import javafx.application.*;
+//Subclass of application class is needed for all standalone applications
+import javafx.scene.control.*;
+/*This group of imports is for providing size , colour etc.
+ * to the group node , which forms the main basis of all the
+ * buttons presnt in the program
+ * 
+ */
+import javafx.scene.layout.*;
+/*
+ * Label class inherits from both , control and layout class
+ */
+import javafx.event.*;
+
+import javafx.geometry.Pos;
+//For handling on-press-action of buttons
+import javafx.scene.paint.*;
+import javafx.scene.image.*;
+
+
+
+
+
+public class PersonalAssisstant extends Application{
+	public static void main(String [] args){
+		launch(args);
+	}
+	
+	public void start(Stage mainStage){
+
+		
+		Label preButtonPress,postButtonPress;	
+		preButtonPress = new Label("Select one : ");
+		postButtonPress = new Label();
+		
+		
+		mainStage.setTitle("PersonaL Assisstant");
+		
+		FlowPane mainSceneNode = new FlowPane(10,10);
+		mainSceneNode.setAlignment(Pos.CENTER);
+		
+		Scene mainScene = new Scene(mainSceneNode,800,600);
+		mainScene.setFill(Color.GREEN);
+		mainStage.setScene(mainScene);
+		
+		
+		Button financeManager = new Button("Finance Manager",new ImageView("image/financeManagerButton.jpeg"));
+		Button profileManager = new Button("Profile Manager");
+		Button callReminder = new Button("Call Reminder");
+		Button routineMaker = new Button("Routine Maker");
+		financeManager.setContentDisplay(ContentDisplay.TOP);
+		financeManager.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				postButtonPress.setText("Finance Manager module to be called\n");
+			}
+		});
+		profileManager.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				postButtonPress.setText("Profile Manager module to be called\n");
+			}
+		});
+		callReminder.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				postButtonPress.setText("Call Reminder module to be called\n");
+			}
+		});
+		routineMaker.setOnAction(new EventHandler<ActionEvent>(){
+			public void handle(ActionEvent ae){
+				postButtonPress.setText("Routine Maker module to be called\n");
+			}
+		});
+		
+		//Image mainSceneImage = new Image("image/1.png");
+		ImageView mainSceneImageView = new ImageView("image/1.png");
+		
+		mainStage.setFullScreen(true);
+		
+	
+	
+		mainSceneNode.getChildren().addAll(preButtonPress,financeManager,profileManager,callReminder,routineMaker);
+		mainSceneNode.getChildren().add(postButtonPress);
+		mainSceneNode.getChildren().add(mainSceneImageView);
+		
+		
+		
+		
+	
+		
+
+		mainStage.show();
+
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+Choose what you would like to do for 6 months :
+1) Write on politics (Influence +300, Gold +1500,Morality -5) 
+		(5% chance of pissing of the king)
+		(If king gets angry,Influence -10000,3% chance of execution )
+2) Write on culture (Influence +50, Gold +300, Morality +10)
+3) Write a story book (Influence +10, Gold +8000)
+4) Publish and promote your work (Gold -20000, 40% chance of popularity)
+		(If popular, then : Influence +2500, Gold +25000)
+5) Research on literature (money -3000, 1% chance of revolutionary change)
+		(With success, you will define a new era of language.
+		and will be remembered even after death and become a famed writer)

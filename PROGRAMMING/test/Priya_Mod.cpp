@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cstdio>
+#include <ctime>
+#include <cstdlib>
+#include <set>
+#include <algorithm>
+
+using namespace std;
+
+void inputGenerator(){
+
+ freopen ("myfile.txt","w",stdout);
+  printf ("This sentence is redirected to a file.");
+  fclose (stdout);
+
+	srand(time(NULL));
+	ofstream fp;
+	fp.open("Test_Case.txt");
+	for(int i=0 ; i<=100000 ; i++)
+	{
+		fp<<rand()%100000<<endl;
+	}
+
+	fp.close();
+
+}
+
+void inputProcessor(){
+
+	std::set<int> mainData; 
+	std::set<int>::iterator it;
+	int data;
+
+	ifstream ifp ("Test_Case.txt",ios::app);
+	while (!ifp.eof())
+	{
+		ifp>>data;
+		mainData.insert(data);
+	}
+	ifp.close();
+
+
+	ofstream ofp;
+	ofp.open("Output.txt");
+	for(it = mainData.begin() ; it != mainData.end() ; it++)
+	{
+		ofp<<*it<<endl;
+	}
+	ofp.close();
+
+}
+
+int main()
+{
+	inputGenerator();
+	inputProcessor();
+	return 0;
+}

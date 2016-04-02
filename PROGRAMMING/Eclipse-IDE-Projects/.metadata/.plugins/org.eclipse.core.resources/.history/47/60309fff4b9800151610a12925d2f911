@@ -1,0 +1,70 @@
+package profileManagerPackage;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.GridBagLayout;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JLabel;
+
+public class test extends JFrame {
+	private JTextField textField;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					test frame = new test();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public test() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JPopupMenu popupMenu = new JPopupMenu();
+		addPopup(getContentPane(), popupMenu);
+		
+		JLabel label = new JLabel("");
+		popupMenu.add(label);
+		
+		JLabel lblLoginForm = new JLabel("               Login Form");
+		popupMenu.add(lblLoginForm);
+		
+		textField = new JTextField();
+		popupMenu.add(textField);
+		textField.setColumns(10);
+		
+		passwordField = new JPasswordField();
+		popupMenu.add(passwordField);
+		GridBagLayout gridBagLayout = new GridBagLayout();
+		gridBagLayout.columnWidths = new int[]{0};
+		gridBagLayout.rowHeights = new int[]{0};
+		gridBagLayout.columnWeights = new double[]{Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{Double.MIN_VALUE};
+		getContentPane().setLayout(gridBagLayout);
+	}
+
+	private static void addPopup(Component component, final JPopupMenu popup) {
+	}
+}

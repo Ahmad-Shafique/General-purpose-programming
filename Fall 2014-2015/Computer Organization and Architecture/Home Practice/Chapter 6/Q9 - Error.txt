@@ -1,0 +1,31 @@
+.model small
+.stack 100h
+.code
+main proc    
+    
+    mov bl,80h
+    mov bh,FFh
+    
+    nlloop:
+    cmp bl,bh
+    je exit
+    
+    mov ah,2
+    mov dl,0dh
+    int 21h
+    mov dl,0ah
+    int 21h
+    
+    mov cx,10
+    printloop:
+    mov ah,2
+    mov dl,bl
+    int 21h
+    add bl,1h
+    loop printloop  
+    
+    jmp nlloop
+    
+    exit:
+    main endp
+end main

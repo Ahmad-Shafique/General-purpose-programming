@@ -1,0 +1,23 @@
+.model small
+.stack 100h
+.data    
+str1 db 0ah,0dh,"Hello World$"
+.code
+main proc    
+    mov dl,61h
+    
+    mov ah,2
+    int 21h  
+    
+    mov ax,@data
+    mov ds,ax
+    
+    mov ah,9
+    lea dx,str1
+    int 21h
+    
+main endp
+end main
+
+        
+    

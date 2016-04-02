@@ -1,0 +1,57 @@
+//http://www.cprogramming.com/debugging/segfaults.html
+//http://stackoverflow.com/questions/18271363/line-by-line-c-c-code-debugging-in-linux-ubuntu
+
+#include <iostream>
+
+using namespace  std;
+
+void mergesort(int arr[], int init, int length);
+void merge(int arr[], int hinit,int hend,int linit, int lend);
+
+
+int main()
+{
+int arr[5] = {5,4,3,2,1};
+mergesort(arr,0,5);
+for(int i=0 ; i<5 ; i++)
+{
+cout<<arr[i]<<" ";
+
+}
+
+return 0;
+}
+
+void mergesort(int arr[] ,int init , int length)
+{
+if(length > 1)
+{
+mergesort(arr,0,length);
+mergesort(arr,length/2,length);
+}
+merge(arr,0,length/2,length/2,length);
+
+/*for(int i=0 ; i<5 ; i++)
+	cout<<arr[i]<<" ";
+cout<<endl;
+*/
+
+}
+
+void merge(int arr[], int hinit,int hend,int linit, int lend)
+{
+int newarr[lend],mctr=0,hctr=hinit,lctr=hend;
+while(!mctr == lend-1)
+{
+if(arr[lctr] < arr[hctr])
+{
+newarr[mctr++] = arr[lctr++];
+}
+else if(arr[hctr] < arr[lctr])
+	newarr[mctr++] = arr[lctr++];
+}
+}
+
+
+
+

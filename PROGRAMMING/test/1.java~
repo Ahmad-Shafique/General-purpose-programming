@@ -1,0 +1,9 @@
+class one{
+
+public static void main(String [] args)
+{
+//char c= 
+String s1="Hello\nThere\\How are\ryou\nUni : \u00a5123";
+System.out.println(s1);
+}
+}

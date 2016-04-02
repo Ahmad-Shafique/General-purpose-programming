@@ -1,0 +1,5 @@
+Choose what you would like to do for next 6 months :
+1) Work (Influence +10, Physique +5, money +6000)
+2) Research (money -1000, 2.5%chance of success)
+	    (When successful, 
+		Influence +10000, money +30000, Becomes Inventor)

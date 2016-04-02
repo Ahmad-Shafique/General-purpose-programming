@@ -1,0 +1,8 @@
+Chips (in airport) = 40
+Rolls (in airport) = 30
+Airport taxi = 500
+Chicken biriyani = 110
+Chair = 480
+Singara (3) = 18
+Bus fare = 5+12
+Ricksaw = 10+10

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1445965685 source:/home/aaa450/PROGRAMMING/SORTING_ALGORITHMS/test/main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<iostream>
+	<cstdio>
+	<conio>
+	<iostream>
+

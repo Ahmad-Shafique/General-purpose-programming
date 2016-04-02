@@ -1,0 +1,41 @@
+.model small
+.stack 100h
+.code
+main proc
+    xor bx,bx
+    mov cx,16
+    
+    start:
+    mov ah,1
+    int 21h
+    
+    cmp al,0dh
+    je print
+    
+    shl bx,1
+    
+    or bl,al
+    loop start
+    
+    print:
+    mov cx,16
+    
+    prloop:
+    rol bx,1
+    jc pr1
+    jnc pr2
+    
+    pr1:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    loop prloop
+    
+    pr2:
+    mov dl,30h
+    mov ah,2
+    int 21h
+    loop prloop 
+    
+    main endp
+end main

@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+#include<cstdio>
+
+using namespace std;
+
+int main(){
+
+char c;
+
+int i=0;
+while(cin>>c){
+i++;	
+if(c=='\n')
+		cout<<endl;
+	else{
+		c-=7;
+		cout<<c;
+	}
+}
+	cout<<i;
+
+
+return 0;
+}
+

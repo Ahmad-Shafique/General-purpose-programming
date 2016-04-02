@@ -1,0 +1,113 @@
+# depslib dependency file v1.0
+1395852656 source:h:\programming language 1\home made projects\problem sheet\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
+1395471387 source:h:\programming language 1\home made projects\problem sheet\question 1 (even-odd).c
+
+1395472046 source:h:\programming language 1\home made projects\problem sheet\question 2(prime number).c
+
+1395472183 source:h:\programming language 1\home made projects\problem sheet\question 3 (leap year).c
+
+1395472752 source:h:\programming language 1\home made projects\problem sheet\question 4.c
+
+1395477550 source:h:\programming language 1\home made projects\problem sheet\question 5 (factoial number).c
+
+1395473402 source:h:\programming language 1\home made projects\problem sheet\question 4 (ascii).c
+
+1395477922 source:h:\programming language 1\home made projects\problem sheet\question 5 (perfect number).c
+
+1395477922 source:h:\programming language 1\home made projects\problem sheet\question 6 (perfect number).c
+
+1395498037 source:h:\programming language 1\home made projects\problem sheet\question 7 (armstrong number).c
+
+1395501918 source:h:\programming language 1\home made projects\problem sheet\question 8 (sum of all diits).c
+
+1395502527 source:h:\programming language 1\home made projects\problem sheet\print command.c
+
+1395503860 source:h:\programming language 1\home made projects\problem sheet\question 9 (reverse of a number).c
+
+1395505126 source:h:\programming language 1\home made projects\problem sheet\kilometer to mile.c
+
+1395505126 source:h:\programming language 1\home made projects\problem sheet\mile to kilometer.c
+
+1395505344 source:h:\programming language 1\home made projects\problem sheet\question 10 (distance conversion).c
+
+1395852449 source:h:\programming language 1\home made projects\problem sheet\decimal to octal.c
+
+1395852434 source:h:\programming language 1\home made projects\problem sheet\question eleven.c
+
+1395852449 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\decimal to octal.c
+
+1395505126 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\kilometer to mile.c
+
+1395852656 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
+1395505126 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\mile to kilometer.c
+
+1395502527 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\print command.c
+
+1395471387 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 1 (even-odd).c
+
+1395505344 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 10 (distance conversion).c
+
+1395472046 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 2(prime number).c
+
+1395472183 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 3 (leap year).c
+
+1395473402 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 4 (ascii).c
+
+1395477550 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 5 (factoial number).c
+
+1395477922 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 6 (perfect number).c
+
+1395498037 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 7 (armstrong number).c
+
+1395501918 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 8 (sum of all diits).c
+
+1395503860 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 9 (reverse of a number).c
+
+1395852434 source:h:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question eleven.c
+
+1395856049 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\decimal to octal.c
+
+1395508726 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\kilometer to mile.c
+
+1395856256 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
+1395508726 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\mile to kilometer.c
+
+1395506127 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\print command.c
+
+1395474987 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 1 (even-odd).c
+
+1395508944 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 10 (distance conversion).c
+
+1395475646 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 2(prime number).c
+
+1395475783 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 3 (leap year).c
+
+1395477002 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 4 (ascii).c
+
+1395481150 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 5 (factoial number).c
+
+1395481522 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 6 (perfect number).c
+
+1395505518 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 8 (sum of all diits).c
+
+1395507460 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 9 (reverse of a number).c
+
+1395856034 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question eleven.c
+
+1398544483 source:u:\programming language 1\home made projects\problem sheet\problem sheet(1-10)\question 7 (armstrong number).c
+

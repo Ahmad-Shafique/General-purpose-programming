@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1392872575 source:g:\pl-home based projects\ahmad+imran\loop\loop-1.c
+	<stdio.h>
+	<stdlib.h>
+
+1385316878 source:g:\pl-home based projects\ahmad+imran\loop\main.c
+	<stdio.h>
+	<stdlib.h>
+

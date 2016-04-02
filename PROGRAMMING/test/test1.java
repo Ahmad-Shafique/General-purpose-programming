@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class test1{
+
+	public static void main(String [] args){
+
+		/*File file = new File("db.txt");
+		//FileWriter fw = new FileWriter(file, true); // true for appending
+		//PrintWriter pw = new PrintWriter(fw, true); // true for auto-flush
+		PrintWriter pw = new PrintWriter(fw,true);
+		pw.println("Line 4");
+		pw.println("Line 5");
+		pw.println("Line 6");
+		pw.close();*/
+
+
+		File file = new File("db.txt");
+		PrintWriter pw = new PrintWriter(file, true); // true for auto-flush
+		pw.println("Line 1");
+		pw.println("Line 2");
+		pw.println("Line 3");
+		pw.close();
+
+	}
+
+}

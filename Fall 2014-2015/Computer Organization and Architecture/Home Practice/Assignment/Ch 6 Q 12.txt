@@ -1,0 +1,353 @@
+.model small
+.stack 100h
+.data
+prompt dw 0ah,0dh,"Enter a string of capital letters :",0ah,0dh,"$"
+op dw 0ah,0dh,"The longest consecutively increasing string is : ",0ah,0dh,"$"
+str1 db ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"$" 
+str2 db ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"$" 
+.code
+main proc 
+    mov ax,@data
+    mov ds,ax 
+    
+    mov ah,9
+    lea dx,prompt
+    int 21h
+    
+    
+    str1processing:
+    mov bl,0
+    mov ah,1
+    int 21h
+    
+    mov str1,al
+    inc bl
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1
+    jl compare
+    
+    mov str1+1,al
+    inc bl
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+1
+    jl compare
+    
+    mov str1+2,al
+    inc bl
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+2
+    jl compare
+    
+    mov str1+3,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+3
+    jl compare
+    
+    mov str1+4,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+4
+    jl compare
+    
+    mov str1+5,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+5
+    jl compare
+    
+    mov str1+6,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+6
+    jl compare
+    
+    mov str1+7,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+7
+    jl compare
+    
+    mov str1+8,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+8
+    jl compare
+    
+    mov str1+9,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+9
+    jl compare
+    
+    mov str1+10,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+10
+    jl compare
+    
+    mov str1+11,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+11
+    jl compare
+    
+    mov str1+12,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+12
+    jl compare
+    
+    mov str1+13,al
+    inc bl 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str1+13
+    jl compare
+    
+    mov str1+14,al
+    inc bl 
+    
+    jmp compare
+                
+                
+                
+    
+    
+    str2processing:
+    mov bh,0
+    
+    mov str2,al
+    inc bh
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2
+    jl compare
+    
+    mov str2+1,al
+    inc bh
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+1
+    jl compare
+    
+    mov str2+2,al
+    inc bh
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+2
+    jl compare
+    
+    mov str2+3,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+3
+    jl compare
+    
+    mov str2+4,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+4
+    jl compare
+    
+    mov str2+5,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+5
+    jl compare
+    
+    mov str2+6,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+6
+    jl compare
+    
+    mov str2+7,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+7
+    jl compare
+    
+    mov str2+8,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+8
+    jl compare
+    
+    mov str2+9,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+9
+    jl compare
+    
+    mov str2+10,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+10
+    jl compare
+    
+    mov str2+11,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+11
+    jl compare
+    
+    mov str2+12,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+12
+    jl compare
+    
+    mov str2+13,al
+    inc bh 
+    
+    int 21h
+    cmp al,0dh
+    je final
+    
+    cmp al,str2+13
+    jl compare
+    
+    mov str2+14,al
+    inc bh 
+    
+    
+    
+    
+    compare:
+    cmp bl,bh
+    jle str1processing
+    jmp str2processing
+    
+    
+    final:
+    mov ah,9
+    lea dx,op
+    int 21h
+    cmp bl,bh
+    jge print1
+    jmp print2
+    
+    print1:
+    
+    
+    mov ah,9
+    lea dx,str1
+    int 21h
+    jmp exit
+    
+    print2:
+    mov ah,9
+    lea dx,str2
+    int 21h
+    
+    exit:
+    mov ah,4ch
+    int 21h
+    
+    main endp
+end main

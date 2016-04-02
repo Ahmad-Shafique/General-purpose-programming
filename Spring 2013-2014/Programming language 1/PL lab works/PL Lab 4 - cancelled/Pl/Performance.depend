@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1397127502 source:c:\users\sa\desktop\performance\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1397123598 source:c:\users\sa\desktop\performance\add function.c
+
+1397183364 source:h:\programming language 1\pl lab works\pl lab 3 - final term\ahmed 4\performance\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

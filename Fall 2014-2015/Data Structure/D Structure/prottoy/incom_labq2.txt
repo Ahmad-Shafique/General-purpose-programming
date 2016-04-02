@@ -1,0 +1,78 @@
+#include <iostream>
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node* next;
+};
+
+Node* root1 = NULL;
+
+void del(int x)
+{ 
+	root1->data= x;
+	Node* z=root1;
+	for(;;)
+	{
+		root1->next=root1->next->next;
+		while(root1->next ==NULL)
+		{
+			root1=root1->next;
+		}
+		root1=z;
+	}
+	cout<<"root: "<<root1->data<<endl;
+
+
+}
+
+void AddLast(int value)
+{
+	Node* newNode = new Node;
+	newNode->data = value;
+	newNode->next = NULL;
+
+	if(root1 == NULL)
+	{
+		root1 = newNode;
+	}
+	else
+	{
+		Node* t = root1;
+		while(t->next != NULL)
+		{
+			t = t->next;
+		}
+		t->next = newNode;
+	}
+}
+void print()
+{ 
+	cout << "Current Link: ";
+	Node* t = root1;
+	while(t != NULL)
+	{
+		cout<<t->data<<"->";
+		t = t->next;
+	}
+	cout<<endl;
+	cout<< "Root1 is "<<root1->data<<endl;
+	
+}
+
+void main()
+{
+	int x;
+    AddLast(1);
+    AddLast(2);
+    AddLast(3);
+    AddLast(4);
+	AddLast(5);
+	print();
+	cout<<"\nenter number plz: ";
+	cin>>x;
+	del(x);
+
+}

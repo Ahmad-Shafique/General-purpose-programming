@@ -1,0 +1,3 @@
+1)Perform community service (MP+2)
+2)Perform a minor crime(MP-4,Coin+100)
+3)Run errands for the local lord(IP+1,Coin+10)

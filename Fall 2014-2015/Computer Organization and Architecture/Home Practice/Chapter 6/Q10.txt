@@ -1,0 +1,96 @@
+.model small
+.stack 100h
+.data
+prompt dw 0ah,0dh,"Enter a hex digit : ",0ah,0dh,"$"
+op dw 0ah,0dh,"In decimal : $"
+error dw 0ah,0dh,"Invalid input !! ",0ah,0dh,"$" 
+error2 dw 0ah,0dh,"Please try again",0ah,0dh,"$"
+prompt2 dw 0ah,0dh,"Would you like to try again ?$"
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+
+    
+    start:
+    mov ah,9 
+    lea dx,prompt
+    int 21h
+    
+    mov ah,1
+    int 21h
+    
+    mov bl,al
+    
+    cmp bl,30h
+    jl errord
+    
+    cmp bl,46h
+    jg errord
+    
+    check:
+    cmp bl,39h
+    jg check2
+    jmp do
+    
+    check2:
+    cmp bl,41h
+    jl errord
+    
+    mov ah,9
+    lea dx,op
+    int 21h
+    
+    do:
+    cmp bl,39h
+    jg print2
+    
+    print1:
+    add bl,30h
+    mov dl,bl
+    mov ah,2
+    int 21h
+    jmp go
+    
+    print2:
+    mov dl,31h
+    mov ah,2
+    int 21h
+    
+    sub bl,10h
+    sub bl,1h
+    mov dl,bl
+    int 21h
+    
+    go:
+    mov ah,9
+    lea dx,prompt2
+    int 21h
+    mov ah,1
+    int 21h
+    mov bh,al
+    
+    cmp bh,'y'
+    je start
+    
+    cmp bh,'Y'
+    je start
+    
+    jmp exit
+    
+    errord:
+    mov ah,9
+    lea dx,error
+    int 21h
+    lea dx,error2
+    int 21h
+    jmp start
+    
+    exit:
+    mov ah,4ch
+    int 21h
+    
+    main endp
+end main
+    
+    

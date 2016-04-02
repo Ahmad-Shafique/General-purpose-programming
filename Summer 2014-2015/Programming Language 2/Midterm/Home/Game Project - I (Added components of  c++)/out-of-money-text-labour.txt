@@ -1,0 +1,3 @@
+Unfotunately, you ran out of money and 
+had to beg on the street to avoid starvation.
+Try keeping the balance above 0 next time...

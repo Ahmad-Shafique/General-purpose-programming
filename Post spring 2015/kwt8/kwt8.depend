@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1432411191 source:c:\university\post spring 2015\kwt8\main.cpp
+	<iostream>
+	<fstream>
+

@@ -1,0 +1,12 @@
+import java.lang.*; ////remove
+import javafx.*; ////remove
+import javafx.scene.control;
+
+public class PersonalAssisstant{
+
+	public static void main(String [] args){
+		Add a=new Add();
+		System.out.println(a.add(10,20));
+	}
+
+}

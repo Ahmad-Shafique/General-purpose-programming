@@ -1,0 +1,59 @@
+#include<iostream>
+#include<string>
+#include<sstream>
+
+using namespace std;
+
+int main(){
+
+
+/*
+int a[3];
+int k ,*p;
+p=a;
+while((cin>>k)){
+if(k == 0)
+	break ;
+*p++=k;
+}
+
+for(int i=0; i<3 ; i++){
+cout<< a[i]<<" ";
+}
+cout<< endl;
+*/
+
+int b[3][3], *q , l;
+*q = &b[0][0];
+while((cin>>l)){
+if(l == 0)
+	break ;
+*q++ = l;
+}
+
+
+/*string s1;
+
+while(getline(cin,s1)){
+	int arr[3][3],*p;
+	p=arr;
+	stringstream stream(s1);
+	while(1){
+		int n;
+		stream>>n;
+		*p++ = n;
+		if(!stream)
+			break;
+	}
+
+	for(int i=0 ; i<3 ; i++){
+		for(int j=0 ; j<3 ; j++){
+			cout<<arr[i][j]<<" ";
+		}
+	}
+	cout<<endl;
+}
+*/
+
+return 0;
+}

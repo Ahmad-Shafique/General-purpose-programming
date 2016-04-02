@@ -1,0 +1,9 @@
+#!/bin/bash
+clear
+echo  -n "Enter cost_price:"
+read c
+echo -n "Enter selling_price:"
+read s
+pif  test $c -gt $s
+echo "profit"
+then 

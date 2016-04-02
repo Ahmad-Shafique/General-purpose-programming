@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1420879853 source:e:\my practice (semester break - after fall 2014)\lightoj - bg - 1\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

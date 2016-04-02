@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1403923683 source:e:\programming language 2\home\game project - i (added components of  c++)\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+	<float.h>
+	<iostream>
+	<cstring>
+	<cmath>
+	<iomanip>
+
+1404101857 source:e:\programming language 2\midterm\home\game project - i (added components of  c++)\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+	<float.h>
+	<time.h>
+
+1423368855 source:e:\spring 2015 practice\game project - i (added components of  c++)\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+	<float.h>
+	<time.h>
+
