@@ -1,2 +1,0 @@
-INDEX VERSION 1.127+/home/aaa450/PROGRAMMING/Eclipse-IDE-Projects/.metadata/.plugins/org.eclipse.jdt.core
-188786799.index
