@@ -297,12 +297,276 @@ void pyramid21(int turn, int maxValue){
     printf("\n");
 
     if(turn < maxValue)pyramid21(turn+1, maxValue);
+}
+
+/// 22
+void printPyramid22Elements(int val, int maxVal){
+    if(val < maxVal) printPyramid22Elements(val+1, maxVal);
+    printf("%d ", maxVal);
+}
+void pyramid22(int turn, int maxValue){
+
+    printSpaces(maxValue-turn);
+    printPyramid22Elements(1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid22(turn+1, maxValue);
+}
+
+/// 23
+void printPyramid23Elements(int val, int maxVal){
+    if(val < maxVal) printPyramid23Elements(val+1, maxVal);
+    printf("%d ", maxVal%2);
+}
+void pyramid23(int turn, int maxValue){
+
+    printSpaces(maxValue-turn);
+    printPyramid23Elements(1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid23(turn+1, maxValue);
+}
+
+/// 24
+void printPyramid24Elements(int val, int maxVal){
+    printf("%d ", val%2);
+    if(val < maxVal) printPyramid24Elements(val+1, maxVal);
 
 }
+void pyramid24(int turn, int maxValue){
+
+    printSpaces(maxValue-turn);
+    printPyramid24Elements(1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid24(turn+1, maxValue);
+}
+
+/// 25
+void printSingleSpaces(int val){
+    // cout<<"entered printSpaces with "<<val;
+    if(val >= 1){
+        printSpaces(val-1);
+        printf(" ");
+    }
+}
+void printPyramid25Elements(int printRange, int valueToPrint){
+    if(printRange >= 1){
+        printPyramid25Elements(printRange-1, valueToPrint);
+        if(printRange%2){
+            printf("%d ", valueToPrint);
+        }
+        else printf("  ");
+    }
+}
+void pyramid25(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid25Elements((2*turn)-1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid25(turn+1, maxValue);
+}
+
+/// 26
+void printPyramid26Elements(int printRange, int valueToPrint){
+    if(printRange >= 1){
+        printPyramid26Elements(printRange-1, valueToPrint);
+        if(printRange%2){
+            printf("%c ", valueToPrint+64);
+        }
+        else printf("  ");
+    }
+}
+void pyramid26(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid26Elements((2*turn)-1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid26(turn+1, maxValue);
+}
+
+/// 27
+void printPyramid27Elements(int printRange, int valueToPrint){
+    if(printRange >= 1){
+        printPyramid27Elements(printRange-1, valueToPrint);
+        if(printRange%2){
+            printf("%c ", valueToPrint+64);
+        }
+        else printf("  ");
+    }
+}
+void pyramid27(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid27Elements((2*turn)-1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid27(turn+1, maxValue);
+
+    printSingleSpaces(maxValue-turn+2);
+    printPyramid27Elements((2*turn-1)-1, turn-1);
+    printf("\n");
+}
+
+/// 28
+void printPyramid28Elements(int printRange, int valueToPrint){
+    if(printRange >= 1){
+        printPyramid28Elements(printRange-1, valueToPrint);
+        if(printRange%2){
+            printf("%d ", valueToPrint);
+        }
+        else printf("  ");
+    }
+}
+void pyramid28(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid28Elements((2*turn)-1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid28(turn+1, maxValue);
+
+    printSingleSpaces(maxValue-turn+2);
+    printPyramid28Elements((2*turn-1)-1, turn-1);
+    printf("\n");
+}
+
+/// 29
+void printPyramid29Elements(int printRange, int valueToPrint){
+    if(printRange >= 1){
+        printPyramid29Elements(printRange-1, valueToPrint);
+        if(printRange%2){
+            printf("%d ", valueToPrint);
+        }
+        else printf("  ");
+    }
+}
+void pyramid29(int turn, int maxValue){
+
+    printPyramid29Elements((2*turn)-1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid29(turn+1, maxValue);
+
+    printPyramid29Elements((2*turn-1)-1, turn-1);
+    printf("\n");
+}
+
+/// 30
+void printPyramid30Elements(int printRange, int valueToPrint){
+
+    if(printRange >= 1){
+        printPyramid30Elements(printRange-1, valueToPrint);
+        printf("%d ", valueToPrint);
+    }
+}
+void pyramid30(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid30Elements(turn, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid30(turn+1, maxValue);
+
+    printSingleSpaces(maxValue-turn+2);
+    printPyramid30Elements(turn-1, turn-1);
+    printf("\n");
+}
+
+/// 31
+void printPyramid31Elements(int printVal, int maxVal){
+    if(printVal <= maxVal){
+        if(printVal >= 1  && printVal != maxVal)printf("%d ", printVal);
+        printPyramid31Elements(printVal+1, maxVal);
+        printf("%d ", printVal);
+    }
+}
+void pyramid31(int turn, int maxValue){
+
+    printSingleSpaces(maxValue-turn+1);
+    printPyramid31Elements(1, turn);
+    printf("\n");
+
+    if(turn < maxValue)pyramid31(turn+1, maxValue);
+
+    printSingleSpaces(maxValue-turn+2);
+    printPyramid31Elements(1, turn-1);
+    printf("\n");
+}
+
+/// 32
+/// Call 31
+
+/// 33
+void print4Spaces(int repetation){
+    if(repetation > 1) print4Spaces(repetation-1);
+    printf("    ");
+}
+int printPyramid33Elements(int startVal, int maxVal){
+    printf("%4d", startVal);
+    if(startVal < maxVal)printPyramid33Elements(startVal+1, maxVal);
+    if(startVal != maxVal)printf("%4d", startVal);
+}
+int pyramid33( int atVal, int maxVal){
+    print4Spaces(maxVal-atVal+1);
+    printPyramid33Elements(atVal, atVal*2-1);
+    printf("\n");
+
+    if(atVal < maxVal) pyramid33(atVal+1, maxVal);
+
+    if(atVal != maxVal){
+        print4Spaces(maxVal-atVal+1);
+        printPyramid33Elements(atVal, atVal*2-1);
+        printf("\n");
+    }
+}
+
+/// 34
+int printPyramid34Elements(int startVal, int maxVal){
+    printf("%4d", startVal%10);
+    if(startVal < maxVal)printPyramid34Elements(startVal+1, maxVal);
+    if(startVal != maxVal)printf("%4d", startVal%10);
+}
+int pyramid34( int atVal, int maxVal){
+    print4Spaces(maxVal-atVal+1);
+    printPyramid34Elements(atVal, atVal*2-1);
+    printf("\n");
+
+    if(atVal < maxVal) pyramid34(atVal+1, maxVal);
+
+    if(atVal != maxVal){
+        print4Spaces(maxVal-atVal+1);
+        printPyramid34Elements(atVal, atVal*2-1);
+        printf("\n");
+    }
+}
+
+/// 35
+int printPyramid35Elements(int startVal, int maxVal){
+    if(maxVal>1) startVal = printPyramid35Elements(startVal, maxVal-1);
+    printf("%3d", startVal);
+    return startVal+1;
+}
+int pyramid35( int atVal, int maxVal){
+    if(maxVal > 1) atVal = pyramid35(atVal,maxVal-1);
+    int returnable = printPyramid35Elements(atVal,maxVal);
+    printf("\n");
+    return (returnable);
+}
+
+/// 36 & 37 are implementable, but is a waste of time. The time spent finding correlation between
+/// the numbers is better spent solving problems;
+
+
+
+
+
 
 
 
 int main(){
-    pyramid21(1, 5);
+    pyramid35(1,5);
     return 0;
 }
